@@ -1,4 +1,6 @@
 const API_KEY= "pub_3d8c0110efaf478384067b69c3feeafb"
+const Api_Key= "d74a7b3652104eb6a80f8453a2292f34"
+
 
 export const fetchBreakingNews = async ()=>{
 try{
@@ -62,6 +64,22 @@ export const fetchArticleById = async (id:string)=>{
         const data= await res.json();
     
        return data.results;
+       
+        }catch(err){
+         console.error("Error fetching products:", err);
+      }
+        
+
+}
+
+
+export const fetchTopArticles = async ()=>{
+    try{
+        const res = await fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${Api_Key}`)
+        const data= await res.json();
+        
+       return data.articles;
+       console.log(data.articles)
        
         }catch(err){
          console.error("Error fetching products:", err);

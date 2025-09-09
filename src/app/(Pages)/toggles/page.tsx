@@ -19,23 +19,24 @@ export default function Page() {
   }
   return (
  <>
-          <ButtonGroup className="mb-2">
+ <div className="d-flex justify-content-center mt-3">
+            <ButtonGroup className="  mb-2">
         <ToggleButton
           id="toggle-check"
           type="checkbox"
-          variant="secondary"
           checked={checked}
           value="1"
           onClick={toggleHandle}
+          className='bg-light text-danger'
         >
           Politicals
         </ToggleButton>
                 <ToggleButton
           id="toggle-check"
           type="checkbox"
-          variant="secondary"
           checked={checked}
           value="1"
+          className='bg-light text-danger'
           
         >
           Checked
@@ -43,9 +44,9 @@ export default function Page() {
                 <ToggleButton
           id="toggle-check"
           type="checkbox"
-          variant="secondary"
           checked={checked}
           value="1"
+          className='bg-light text-danger'
           
         >
           Checked
@@ -53,14 +54,15 @@ export default function Page() {
                 <ToggleButton
           id="toggle-check"
           type="checkbox"
-          variant="secondary"
           checked={checked}
           value="1"
-          
+          className='bg-light text-danger'
         >
           Checked
         </ToggleButton>
       </ButtonGroup>
+ </div>
+
     </>
   )
 }
